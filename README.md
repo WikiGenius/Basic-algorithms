@@ -1,2 +1,0 @@
-# Basic-algorithms
-All algorithms
