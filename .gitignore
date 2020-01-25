@@ -1,5 +1,6 @@
 #binary
 algo
+data/generate
 # Prerequisites
 *.d
 
