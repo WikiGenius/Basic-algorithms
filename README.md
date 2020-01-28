@@ -16,12 +16,12 @@ The usage:
 
 If you want to generate new random data with any size you have date folder:
 
-cd data/;    make all;
+cd data/ &&  make all;
 
 ./generate <size_of_data>;
 
 To use the algo library
 
-cd Basic-algorithms;   make all;
+cd Basic-algorithms && make all;
 
 ./algo <data_to_search> ;
