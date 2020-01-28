@@ -1,29 +1,15 @@
 # Basic-algorithms
 
-All algorithms.
-
-I will add the other basic algorthms From time to time.
+All algorithms.       I will add the other basic algorthms From time to time.
 
 Keep updated.
 
 
 #The current algorithms in library:
 
-Sort:
+Sort:   quickSort   mergeSort    selectionSort   insertionSort    bubbleSort
 
-quickSort 
-
-mergeSort
-
-selectionSort
-
-insertionSort
-
-bubbleSort
-
-Search:
-
-bin_search
+Search:  bin_search
 
 The usage:
 
