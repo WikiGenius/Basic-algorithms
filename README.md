@@ -13,7 +13,7 @@ Search: bin_search
 
 The usage:
 
-<var> replace it with your variable.
+<VAR> replace it with your variable.
 
 If you want to generate new random data with any size you have date folder:
 
