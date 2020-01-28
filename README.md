@@ -7,9 +7,9 @@ Keep updated.
 
 #The current algorithms in library:
 
-Sort:   quickSort   mergeSort    selectionSort   insertionSort    bubbleSort
+Sort: quickSort___mergeSort___ selectionSort___insertionSort___bubbleSort
 
-Search:  bin_search
+Search: bin_search
 
 The usage:
 
