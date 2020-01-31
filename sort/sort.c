@@ -199,4 +199,22 @@ void quickSort(int *arr, const int n, const int p, const int r)
 	}
 }
 
+/********************************************************
+General Sort Definition
+********************************************************/
 
+void Sort(int *arr, const int n, const int p, const int r,\
+	void(*type_sort)(int* , const int , const int , const int )) 
+{
+    /********************************************************
+    Sort functions:
+
+    quickSort 
+    mergeSort
+    selectionSort
+    insertionSort
+    bubbleSort
+
+    ********************************************************/
+	type_sort(arr , n , p , r);
+}

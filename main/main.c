@@ -13,9 +13,6 @@ January 2020
 #include<time.h>
 #include"algorithm.h"
 
-void Sort(int*, const int, const int, const int , void(*type_sort)(int* , const int , const int , const int )); 
-
-
 int main(int argc, char const *argv[])
 {
 	int q = 0;
@@ -24,6 +21,11 @@ int main(int argc, char const *argv[])
 	{
 		q = atoi(argv[1]);
 
+	}
+	else
+	{
+		printf("Usage: ./algo numerical data \n");
+		return 1;
 	}
 
 	clock_t start, end;
@@ -49,21 +51,7 @@ int main(int argc, char const *argv[])
 
 	int index = bin_search(arr,n,q);	 
 	printf("index  for query = %d : %d \n",q, index );
+
 	return 0;
 }
 
-void Sort(int *arr, const int n, const int p, const int r,\
-	void(*type_sort)(int* , const int , const int , const int )) 
-{
-    /********************************************************
-    Sort functions:
-
-    quickSort 
-    mergeSort
-    selectionSort
-    insertionSort
-    bubbleSort
-
-    ********************************************************/
-	type_sort(arr , n , p , r);
-}

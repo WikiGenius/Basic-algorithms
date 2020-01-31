@@ -58,6 +58,11 @@ Quick Sort Declaration
 int divide(int * arr, int p, int r);
 void quickSort(int* arr, const int n, const int p, const int r);
 
+/********************************************************
+General Sort Declaration
+********************************************************/
+
+void Sort(int*, const int, const int, const int , void(*type_sort)(int* , const int , const int , const int )); 
 
 #endif // !SORT_H
 
