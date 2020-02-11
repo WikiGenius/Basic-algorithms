@@ -19,7 +19,7 @@ bubbleSort
 bin_search
 ```
 
-##Usage
+Usage
 =======
 
 If you want to generate new random data with any size you have date folder:
