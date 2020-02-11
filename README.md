@@ -4,7 +4,6 @@ All algorithms.       I will add the other basic algorthms From time to time.
 
 Keep updated.
 
-
 ##The current algorithms in library:
 
 #Sort: 
@@ -15,13 +14,13 @@ selectionSort
 insertionSort
 bubbleSort
 ```
-
-#Search: bin_search
+#Search:
 ```bash
-```
 bin_search
-##The usage:
+```
 
+##Usage
+=======
 
 If you want to generate new random data with any size you have date folder:
 
