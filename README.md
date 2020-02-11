@@ -7,10 +7,19 @@ Keep updated.
 
 ##The current algorithms in library:
 
-Sort: quickSort___mergeSort___ selectionSort___insertionSort___bubbleSort
+#Sort: 
+```bash
+quickSort
+mergeSort
+selectionSort
+insertionSort
+bubbleSort
+```
 
-Search: bin_search
-
+#Search: bin_search
+```bash
+```
+bin_search
 ##The usage:
 
 
