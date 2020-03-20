@@ -14,7 +14,7 @@ selectionSort
 insertionSort
 bubbleSort
 ```
-### Search:
+### Search
 ```bash
 bin_search
 ```
