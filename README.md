@@ -4,9 +4,9 @@ All algorithms.       I will add the other basic algorthms From time to time.
 
 Keep updated.
 
-##The current algorithms in library:
+## The current algorithms in library:
 
-#Sort: 
+# Sort: 
 ```bash
 quickSort
 mergeSort
@@ -29,7 +29,7 @@ cd data/ &&  make all;
 ./generate <size_of_data>;
 ```
 
-##To use the algo library
+## To use the algo library
 
 ```bash
 cd Basic-algorithms && make all;
