@@ -35,3 +35,4 @@ cd data/ &&  make all;
 cd Basic-algorithms && make all;
 ./algo <data_to_search> ;
 ```
+That is my account [Github](https://github.com/WikiGenius)
