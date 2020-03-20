@@ -4,7 +4,7 @@ All algorithms.       I will add the other basic algorthms From time to time.
 
 Keep updated.
 
-## The current algorithms in library:
+## The current algorithms in library
 
 ### Sort 
 ```c
