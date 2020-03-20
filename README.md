@@ -6,7 +6,7 @@ Keep updated.
 
 ## The current algorithms in library:
 
-# Sort: 
+### Sort 
 ```bash
 quickSort
 mergeSort
@@ -14,7 +14,7 @@ selectionSort
 insertionSort
 bubbleSort
 ```
-#Search:
+### Search:
 ```bash
 bin_search
 ```
