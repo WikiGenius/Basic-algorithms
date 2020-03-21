@@ -9,7 +9,7 @@ January 2020
 
 ********************************************************/
 
-#include"search.h"
+#include "search.h"
 
 /********************************************************
 Functions Definition
@@ -19,13 +19,13 @@ Functions Definition
 Binary search Definition
 ********************************************************/
 
-int bin_search (int *arr, int n, int query)
+int bin_search(int *arr, int n, int query)
 {
 	int p = 0;
 	int r = n - 1;
 	int q;
 
-	label:
+label:
 
 	q = (p + r) / 2;
 
@@ -50,5 +50,5 @@ int bin_search (int *arr, int n, int query)
 		goto label;
 	}
 
-return -1;
+	return -1;
 }

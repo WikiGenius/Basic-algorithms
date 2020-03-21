@@ -13,4 +13,4 @@ search.o: ./search/search.c
 read.o: ./read_data/read_data.c
 	$(CC) $(CFLAGS)  ./read_data/read_data.c -o read.o
 clean:
-	rm -rf *o algo
+	rm -rf *.o algo

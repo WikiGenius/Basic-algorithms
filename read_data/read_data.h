@@ -18,7 +18,6 @@ Functions Declaration
 /********************************************************
 read Data from stored file Declaration
 ********************************************************/
-int *readData(char*, int*);
+int *readData(char *, int *);
 
 #endif // !READ_DATA_H
-

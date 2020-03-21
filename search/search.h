@@ -15,14 +15,10 @@ January 2020
 Functions Declaration
 ********************************************************/
 
-
 /********************************************************
 Binary search Declaration
 ********************************************************/
 
 int bin_search(int *arr, int n, int query);
 
-
-
 #endif // !SEARCH_H
-

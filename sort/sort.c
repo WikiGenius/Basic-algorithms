@@ -9,8 +9,8 @@ January 2020
 
 ********************************************************/
 
-#include"sort.h"
-#include<stdlib.h>
+#include "sort.h"
+#include <stdlib.h>
 
 /********************************************************
 Functions Definitions
@@ -20,7 +20,7 @@ Functions Definitions
 Common Definition
 ********************************************************/
 
-void swap(int *a, int *b) 
+void swap(int *a, int *b)
 {
 	int temp = *a;
 	*a = *b;
@@ -31,22 +31,22 @@ void swap(int *a, int *b)
 Bubble Sort Definition
 ********************************************************/
 
-void Switch(int *arr, int n, int *not_sorted) 
+void Switch(int *arr, int n, int *not_sorted)
 {
 	*not_sorted = 0;
-	for (int i = 0; i < n - 1; i++) 
+	for (int i = 0; i < n - 1; i++)
 	{
-		if (arr[i + 1] < arr[i]) 
+		if (arr[i + 1] < arr[i])
 		{
 			swap(&arr[i + 1], &arr[i]);
 			*not_sorted = 1;
 		}
 	}
 }
-void bubbleSort(int *arr, const int n, const int p, const int r) 
+void bubbleSort(int *arr, const int n, const int p, const int r)
 {
 	int not_sorted = 1;
-	while (not_sorted) 
+	while (not_sorted)
 	{
 		Switch(arr, n, &not_sorted);
 	}
@@ -56,7 +56,7 @@ void bubbleSort(int *arr, const int n, const int p, const int r)
 Selection Sort Definition
 ********************************************************/
 
-int IndexOfMinimum(int *arr, int n, int start_index) 
+int IndexOfMinimum(int *arr, int n, int start_index)
 {
 	int smallest_index = start_index;
 
@@ -69,9 +69,9 @@ int IndexOfMinimum(int *arr, int n, int start_index)
 	}
 	return smallest_index;
 }
-void selectionSort(int *arr, const int n, const int p, const int r) 
+void selectionSort(int *arr, const int n, const int p, const int r)
 {
-	for (int i = 0; i < n; i++) 
+	for (int i = 0; i < n; i++)
 	{
 		int min_index = IndexOfMinimum(arr, n, i);
 		swap(&arr[i], &arr[min_index]);
@@ -82,74 +82,74 @@ void selectionSort(int *arr, const int n, const int p, const int r)
 Insertion Sort Definition
 ********************************************************/
 
-void insert(int *arr, int n, int rightIndex) 
+void insert(int *arr, int n, int rightIndex)
 {
 	int key = arr[rightIndex];
 	int j = rightIndex - 1;
-	for (; j >= 0 && key < arr[j]; j--) 
+	for (; j >= 0 && key < arr[j]; j--)
 	{
 		arr[j + 1] = arr[j];
-
 	}
 	arr[j + 1] = key;
 }
-void insertionSort(int *arr, const int n, const int p, const int r) 
+void insertionSort(int *arr, const int n, const int p, const int r)
 {
-	for (int i = 1; i < n; i++) 
+	for (int i = 1; i < n; i++)
 	{
 		insert(arr, n, i);
 	}
-}////////////////////////////////////////////////////////
+} ////////////////////////////////////////////////////////
 
 /********************************************************
 Merge Sort Definition
 ********************************************************/
 
-void merge(int *arr, const int n, const int p, const int q, const int r) 
+void merge(int *arr, const int n, const int p, const int q, const int r)
 {
 	const int nL = q - p + 1;
 	const int nR = r - q;
-	int *arrLeft = (int*)calloc(nL, sizeof(int));
-	int *arrRight = (int*)calloc(nR, sizeof(int));
+	int *arrLeft = (int *)calloc(nL, sizeof(int));
+	int *arrRight = (int *)calloc(nR, sizeof(int));
 
-	for (int i = 0; i < nL; i++) 
+	for (int i = 0; i < nL; i++)
 	{
 		arrLeft[i] = arr[p + i];
 	}
-	for (int i = 0; i < nR; i++) {
+	for (int i = 0; i < nR; i++)
+	{
 		arrRight[i] = arr[q + 1 + i];
 	}
 	int arrL_count = 0, arrR_count = 0, arr_count = p;
 	//comparison
-	for (; arrL_count < nL && arrR_count < nR; arr_count++) 
+	for (; arrL_count < nL && arrR_count < nR; arr_count++)
 	{
-		if (arrLeft[arrL_count] < arrRight[arrR_count]) 
+		if (arrLeft[arrL_count] < arrRight[arrR_count])
 		{
 			arr[arr_count] = arrLeft[arrL_count];
 			arrL_count++;
 		}
-		else 
+		else
 		{
 			arr[arr_count] = arrRight[arrR_count];
 			arrR_count++;
 		}
 	}
 	//if there are remind
-	for (; arrL_count < nL; arrL_count++, arr_count++) 
+	for (; arrL_count < nL; arrL_count++, arr_count++)
 	{
 		arr[arr_count] = arrLeft[arrL_count];
 	}
-	for (; arrR_count < nR; arrR_count++, arr_count++) 
+	for (; arrR_count < nR; arrR_count++, arr_count++)
 	{
 		arr[arr_count] = arrRight[arrR_count];
 	}
 	free(arrLeft);
 	free(arrRight);
 }
-void mergeSort(int *arr, const int n, const int p, const int r) 
+void mergeSort(int *arr, const int n, const int p, const int r)
 {
 
-	if (p < r) 
+	if (p < r)
 	{
 		int q = (p + r) / 2;
 		//recursion
@@ -157,27 +157,27 @@ void mergeSort(int *arr, const int n, const int p, const int r)
 		mergeSort(arr, n, q + 1, r);
 		merge(arr, n, p, q, r);
 	}
-
 }
 
 /********************************************************
 Quick Sort Definition
 ********************************************************/
 
-int divide(int *arr, int p, int r) 
+int divide(int *arr, int p, int r)
 {
 
-	int q = p;//small index
-	int u = p;//unkown index
+	int q = p;   //small index
+	int u = p;   //unkown index
 	int piv = p; //pivot // you can choose any random pivot
-	
-	for ( ; u <= r; u++) 
+
+	for (; u <= r; u++)
 	{
-		if (u == piv) 
+		if (u == piv)
 		{
-			q++; continue; 
+			q++;
+			continue;
 		}
-		if (arr[u] <= arr[piv]) 
+		if (arr[u] <= arr[piv])
 		{
 			swap(&arr[u], &arr[q]);
 			q++;
@@ -187,9 +187,9 @@ int divide(int *arr, int p, int r)
 	swap(&arr[q], &arr[piv]);
 	return q;
 }
-void quickSort(int *arr, const int n, const int p, const int r) 
+void quickSort(int *arr, const int n, const int p, const int r)
 {
-	if (p < r) 
+	if (p < r)
 	{
 		int q = divide(arr, p, r);
 		//left pivot
@@ -203,10 +203,10 @@ void quickSort(int *arr, const int n, const int p, const int r)
 General Sort Definition
 ********************************************************/
 
-void Sort(int *arr, const int n, const int p, const int r,\
-	void(*type_sort)(int* , const int , const int , const int )) 
+void Sort(int *arr, const int n, const int p, const int r,
+		  void (*type_sort)(int *, const int, const int, const int))
 {
-    /********************************************************
+	/********************************************************
     Sort functions:
 
     quickSort 
@@ -216,5 +216,5 @@ void Sort(int *arr, const int n, const int p, const int r,\
     bubbleSort
 
     ********************************************************/
-	type_sort(arr , n , p , r);
+	type_sort(arr, n, p, r);
 }

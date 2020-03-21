@@ -8,10 +8,10 @@ January 2020
 
 
 ********************************************************/
-#include<stdio.h>
-#include<stdlib.h>
-#include<time.h>
-#include"algorithm.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include "algorithm.h"
 
 int main(int argc, char const *argv[])
 {
@@ -20,7 +20,6 @@ int main(int argc, char const *argv[])
 	if (argc == 2)
 	{
 		q = atoi(argv[1]);
-
 	}
 	else
 	{
@@ -29,29 +28,26 @@ int main(int argc, char const *argv[])
 	}
 
 	clock_t start, end;
-	
+
 	int n = 0;
-	int* arr = readData(file_name,&n);
+	int *arr = readData(file_name, &n);
 
 	printf("sorted array\n");
 	start = clock();
-	
-	Sort(arr, n, 0, n - 1, quickSort);
 
-	
+	Sort(arr, n, 0, n - 1, quickSort);
 
 	end = clock();
 
-	for (int i = 0; i < n; i++) 
+	for (int i = 0; i < n; i++)
 	{
-	printf("%d%c", arr[i], i == n - 1 ? '\n' : ' ');
+		printf("%d%c", arr[i], i == n - 1 ? '\n' : ' ');
 	}
-	double time_taken = ((double)(end - start)) / CLOCKS_PER_SEC; // in seconds 
-	printf("Sort(arr, n): took %f seconds to execute \n", time_taken);
+	double time_taken = ((double)(end - start)) / CLOCKS_PER_SEC; // in seconds
+	printf("Sort(arr, n): took %f milli seconds to execute \n", 1000 * time_taken);
 
-	int index = bin_search(arr,n,q);	 
-	printf("index  for query = %d : %d \n",q, index );
+	int index = bin_search(arr, n, q);
+	printf("index  for query = %d : %d \n", q, index);
 
 	return 0;
 }
-

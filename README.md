@@ -6,7 +6,8 @@ Keep updated.
 
 ## The current algorithms in library
 
-### Sort 
+### Sort
+
 ```c
 quickSort
 mergeSort
@@ -14,13 +15,14 @@ selectionSort
 insertionSort
 bubbleSort
 ```
+
 ### Search
+
 ```c
 bin_search
 ```
 
-Usage
-=======
+## Usage
 
 If you want to generate new random data with any size you have date folder:
 
@@ -35,4 +37,5 @@ cd data/ &&  make all;
 cd Basic-algorithms && make all;
 ./algo <data_to_search> ;
 ```
+
 That is my account [Github](https://github.com/WikiGenius)
